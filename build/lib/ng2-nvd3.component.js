@@ -130,9 +130,13 @@ var NvD3Component = (function () {
         if (this.svg) {
             var h = void 0, w = void 0;
             if (h = this.options.chart.height) {
-                if (!isNaN(+h))
+                let h_tmp = h;
+                if (!isNaN(+h)) {
                     h += 'px';
-                this.svg.attr('height', h).style({ height: h });
+                    h_tmp += 50;
+                    h_tmp += 'px';
+                }
+                this.svg.attr('height', h).style({height: h_tmp});
             }
             if (w = this.options.chart.width) {
                 if (!isNaN(+w))
