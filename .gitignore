@@ -7,7 +7,6 @@ node_modules
 examples
 coverage
 compiled
-typings
 
 npm-debug*.log
 package-lock.json
